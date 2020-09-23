@@ -23,7 +23,31 @@ class OrderController extends Controller
             $order->total = $product->amount;
             $order->status = 0;
             $order->save();
-            return view('checkout', compact('product', 'order'));
+
+            $fonepay = [];
+            $fonepay['RU'] = route('fonepay.return'); //return url
+            $fonepay['PID'] ='NBQM'; //merchant code ,defined by fonepay system
+            $fonepay['PRN'] =$order->invoice_no; //Product reference number (need to send local merchants)
+            $fonepay['AMT'] =$order->total; //payable amount
+            $fonepay['CRN'] = 'NPR'; //
+            $fonepay['DT'] = date('m/d/Y'); //date format
+            $fonepay['R1'] ='Test';
+            $fonepay['R2'] ='Test';
+            $fonepay['MD'] ='P';
+            $data =
+                $fonepay['RU'] . ',' .
+                $fonepay['PID'] . ',' .
+                $fonepay['PRN'] . ',' .
+                $fonepay['AMT'] . ',' .
+                $fonepay['CRN'] . ',' .
+                $fonepay['DT'] . ',' .
+                $fonepay['R1'] . ',' .
+                $fonepay['R2'] . ',' .
+                $fonepay['MD'];
+            $fonepay['DV'] =hash_hmac('sha512',$data,'a7e3512f5032480a83137793cb2021bc');
+
+
+            return view('checkout', compact('product', 'order','fonepay'));
         }
     }
 
