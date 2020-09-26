@@ -44,7 +44,21 @@
                                 <input value="{{route('esewa.fail')}}" type="hidden" name="fu">
                                 <input type="image" src="{{asset('img/esewa.png')}}" name=""></li>
                         </form>
-                        <li class="list-group-item"><input type="image" src="{{asset('img/fonepay.png')}}" name=""></li>
+                        <li class="list-group-item">
+                            <form action="https://uat.esewa.com.np/epay/main" method="POST">
+                                <input value="{{$fonepay['PID']}}" name="PID" type="hidden">
+                                <input value="{{$product->amount}}" name="MD" type="hidden">
+                                <input value="0" name="PRN" type="hidden">
+                                <input value="0" name="AMT" type="hidden">
+                                <input value="0" name="CRN" type="hidden">
+                                <input value="epay_payment" name="DT" type="hidden">
+                                <input value="{{$order->invoice_no}}" name="R1" type="hidden">
+                                <input value="{{route('esewa.success')}}" type="hidden" name="R2">
+                                <input value="{{route('esewa.fail')}}" type="hidden" name="DV">
+                                <input value="{{route('esewa.fail')}}" type="hidden" name="RU">
+                                <input type="image" src="{{asset('img/fonepay.png')}}" name="">
+                        </form>
+                        </li>
                         <li class="list-group-item"><input type="image" src="{{asset('img/khalti.png')}}" name=""></li>
                         <li class="list-group-item"><input type="image" src="{{asset('img/hbl.jpeg')}}" name=""></li>
 
