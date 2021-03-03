@@ -24,3 +24,6 @@ Route::any('esewa/success', 'EsewaController@success')->name('esewa.success');
 Route::any('esewa/fail', 'EsewaController@fail')->name('esewa.fail');
 
 Route::any('payment/response', 'EsewaController@payment_response')->name('payment.response');
+
+
+ROute::any('fonepay/return','FonepayController@fonepay_return')->name('fonepay.return');

@@ -4,6 +4,7 @@
     <list default="true" id="86fceffc-fb1d-4ce7-86e7-fa449e5bbf54" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/checkout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +151,12 @@
       <updated>1600858474193</updated>
       <workItem from="1600858475618" duration="12260000" />
       <workItem from="1600968710709" duration="663000" />
+      <workItem from="1601135953825" duration="426000" />
+      <workItem from="1601527962501" duration="56000" />
+      <workItem from="1602142730325" duration="611000" />
+      <workItem from="1602146727663" duration="634000" />
+      <workItem from="1614600909294" duration="2902000" />
+      <workItem from="1614768615534" duration="3024000" />
     </task>
     <servers />
   </component>
@@ -157,6 +164,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602151770860">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="466" y="155" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1602151770860" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1600858867351">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
