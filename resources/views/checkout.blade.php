@@ -45,17 +45,20 @@
                                 <input type="image" src="{{asset('img/esewa.png')}}" name=""></li>
                         </form>
                         <li class="list-group-item">
-                            <form action="https://uat.esewa.com.np/epay/main" method="POST">
+                            <form action="https://dev-merchantapi.fonepay.com/api/merchantRequest" method="POST">
                                 <input value="{{$fonepay['PID']}}" name="PID" type="hidden">
-                                <input value="{{$product->amount}}" name="MD" type="hidden">
-                                <input value="0" name="PRN" type="hidden">
-                                <input value="0" name="AMT" type="hidden">
-                                <input value="0" name="CRN" type="hidden">
-                                <input value="epay_payment" name="DT" type="hidden">
-                                <input value="{{$order->invoice_no}}" name="R1" type="hidden">
-                                <input value="{{route('esewa.success')}}" type="hidden" name="R2">
+                                <input value="{{$fonepay['MD']}}" name="MD" type="hidden">
+                                <input value="{{$fonepay['PRN']}}" name="PRN" type="hidden">
+                                <input value="{{$fonepay['AMT']}}" name="AMT" type="hidden">
+                                <input value="{{$fonepay['CRN']}}" name="CRN" type="hidden">
+                                <input value="{{$fonepay['DT']}}" name="DT" type="hidden">
+                                <input value="{{$fonepay['R1']}}" name="R1" type="hidden">
+                                <input value="{{$fonepay['R2']}}" name="R2" type="hidden">
+                                <input value="{{$fonepay['DV']}}" name="DV" type="hidden">
+                                <input value="{{$fonepay['RU']}}" name="RU" type="hidden">
+                                <!-- <input value="{{route('esewa.success')}}" type="hidden" name="R2">
                                 <input value="{{route('esewa.fail')}}" type="hidden" name="DV">
-                                <input value="{{route('esewa.fail')}}" type="hidden" name="RU">
+                                <input value="{{route('esewa.fail')}}" type="hidden" name="RU"> -->
                                 <input type="image" src="{{asset('img/fonepay.png')}}" name="">
                         </form>
                         </li>
