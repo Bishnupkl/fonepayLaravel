@@ -53,9 +53,9 @@
                                 <input value="{{$fonepay['CRN']}}" name="CRN" type="hidden">
                                 <input value="{{$fonepay['DT']}}" name="DT" type="hidden">
                                 <input value="{{$fonepay['R1']}}" name="R1" type="hidden">
-                                <input value="{{$fonepay['R2']}}" name="R1" type="hidden">
-                                <input value="{{$fonepay['DV']}}" name="R1" type="hidden">
-                                <input value="{{$fonepay['RU']}}" name="R1" type="hidden">
+                                <input value="{{$fonepay['R2']}}" name="R2" type="hidden">
+                                <input value="{{$fonepay['DV']}}" name="DV" type="hidden">
+                                <input value="{{$fonepay['RU']}}" name="RU" type="hidden">
                                 <!-- <input value="{{route('esewa.success')}}" type="hidden" name="R2">
                                 <input value="{{route('esewa.fail')}}" type="hidden" name="DV">
                                 <input value="{{route('esewa.fail')}}" type="hidden" name="RU"> -->
